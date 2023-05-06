@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(238, 207, 227, 0.881);
+  }
+  
+    body {
+    background: var(--background-color);
+  }
+  
+  .navegador {
+    width: 100%;
+    height: auto;
+    background-color: lightgray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1rem;    
+  }
+
+  /* vw son unidades dinamicas de tamaño que se adaptan a cualquier pantalla */
+  .logo{
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+
+  .despl {
+    /* Aplicando el posicionamiento relativo, se desplaza la imagen de forma descendente */
+    position: relative;
+    top: 0.3vw;
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+
+/* Boton inicio */
+  .ini {
+    background-color: rgb(11, 11, 11);
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    }
+/*  Cambiar estilo y color al boton inicio cuando paso por encima */
+    .ini:hover {
+      background-color: white;
+      color:rgb(11, 11, 11);
+      padding: 10px;  
+      border-radius: 25px;
+      }
+
+  .barrabusqueda {
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+  }
+  /* estilo dentro de la caja */
+  .barrabusqueda input {
+    height: 40px;
+    width: 45vw;
+  }
+  
+  .navegador ion-icon {
+    width: 7vh;
+  }
+  
+  
+  .navegador a:hover {
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px;
+  }
+  
+  .buscar {
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: 0;
+  }
+  
+  .buscar-button {
+    height: 2rem;
+  }
+  body h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+  
+  .imagenes {
+    padding: 1rem;
+    max-width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+    justify-content: center;
+    grid-template-rows: masonry;
+    gap: 0.5rem;
+  }
+  
+  
+  
+  /* metodologia para hacer la carta */
+  .tarjetas {
+    width: 236px;
+    height: 450px;
+    border-radius: 15px;
+    margin: 2rem;
+    position: relative;
+  }
+  
+  .tarjetas img {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+ .tarjetas:hover button {
+    display: inline-flex;
+  }
+  
+  .tarjetas:hover .menu-inferior {
+    display: flex;
+  }
+
+  /* menu superior de la carta */
+  .menu-superior {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border-radius: 25px;
+    background-color: red;
+    padding: 10px;
+    color: white;
+   /*  Ocultar menu superior */
+    border-style: none;
+    display: none;
+     
+  
+  }
+  
+  /* menu inferior de la carta */
+  
+  .menu-inferior {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+     /*  Ocultar menu inferior */
+    border-style: none;
+
+   
+    
+ 
+    display: none;
+  }
+  
+  .menu-inferior ion-icon {
+    background-color: lightgray;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  
+  .menu-inferior button {
+    padding: 10px;
+    background-color: lightgray;
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: none;
+  }
+  
+  .menu-inferior button a {
+    text-decoration: none;
+    border-style: none;
+    color: black;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .navegador {
+      display: none;
+    }
+  }
+  
